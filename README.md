@@ -22,7 +22,35 @@
 1. **PHP と Composer のインストール**
    ```bash
    brew install php composer
+2. Laravel プロジェクトの作成
+```
+composer create-project laravel/laravel laravel-app
+cd laravel-app
+```
+3. ローカルサーバーの起動
+```bash
+php artisan serve
+```
+4. ブラウザで以下を開く：
+```
+http://localhost:8000
+```
 
+📁 Laravel ディレクトリ構造の概要
+```
+| ディレクトリ         | 役割                                 |
+| -------------- | ---------------------------------- |
+| **app/**       | アプリケーションの主要ロジック（モデル・コントローラなど）      |
+| **bootstrap/** | アプリの初期設定、キャッシュの読み込み                |
+| **config/**    | 設定ファイル群（app.php, database.php など）  |
+| **database/**  | マイグレーション・シーディング関連                  |
+| **public/**    | 公開ディレクトリ（index.php, CSS, JS, 画像など） |
+| **resources/** | Blade テンプレート、フロントエンド資源             |
+| **routes/**    | URL と処理の対応を定義                      |
+| **storage/**   | ログ、キャッシュ、アップロードファイル保存              |
+| **tests/**     | テストコード                             |
+| **vendor/**    | Composer パッケージと依存ライブラリ             |
+```
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
